@@ -18,7 +18,7 @@ public class TestMod {
     //change
     public static final String MOD_ID = "testmod";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public ExampleMod() {
+    public TestMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
