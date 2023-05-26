@@ -5,6 +5,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -28,5 +29,6 @@ public class BluntItem extends Item {
     }
     private void hitBlunt(Player player) {
         player.sendSystemMessage(Component.literal("Puff Puff Hit the Blunt"));
+        player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 1000, 0, false, true));
     }
 }
